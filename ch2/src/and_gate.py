@@ -1,5 +1,8 @@
 import numpy as np
 
+DEFAULT_W = np.array([0.5, 0.5])
+DEFAULT_B = -0.7
+
 def set_param():
     print("input parameter w1: ")
     w1 = float(input())
@@ -22,7 +25,7 @@ def and_gate(x1, x2, w, b):
         return 1
 
 if __name__ == "__main__":
-    w, b = set_param()
+    # w, b = set_param()
     for x_array in [(0, 0), (1, 0), (0, 1), (1, 1)]:
-        y = and_gate(x_array[0], x_array[1], w, b)
+        y = and_gate(x_array[0], x_array[1], DEFAULT_W, DEFAULT_B)  # use default parameters
         print(str(x_array) + " -> " + str(y))
