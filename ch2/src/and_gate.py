@@ -15,7 +15,7 @@ def set_param():
 
     return w, b
 
-def and_gate(x1, x2, w, b):
+def and_gate(x1, x2, w = DEFAULT_W, b = DEFAULT_B):
     x = np.array([x1, x2])
 
     tmp = np.sum(w*x) + b
